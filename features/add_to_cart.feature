@@ -4,12 +4,14 @@ Feature: Add an available single product to the shopping cart
   I want to add an in-stock product to my cart
   So that I can review it and buy it later
 
-  # Source: CSV TC-ECOM-002 · Priority: High · Type: UI / Functional · Status: specified, not automated
+  # Source: CSV TC-ECOM-002 · Priority: High · Type: UI / Functional
+  # Status: Scenario 1 automated (tests/add-to-cart.spec.ts); Scenarios 2 and 3 specified, not automated
 
   Background:
     Given I am on the product page of "GoldenCrust 4-Slice Toaster"
     And the product shows "In Stock"
 
+  @automated
   Scenario: Add one unit of an available product to the cart
     When I note the product name and the sale price "PKR 20,100"
     And I click "Add to Cart"
